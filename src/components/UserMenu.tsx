@@ -7,6 +7,7 @@ import {
   Check,
   ChevronDown,
   ChevronUp,
+  CircleHelp,
   Copy,
   Download,
   ExternalLink,
@@ -3166,8 +3167,20 @@ export const UserMenu: React.FC = () => {
                     <div className='ml-4 mt-2 space-y-2'>
                       <div className='space-y-2'>
                         <div className='flex items-center justify-between gap-3'>
-                          <span className='text-xs text-gray-600 dark:text-gray-400'>
+                          <span className='flex items-center gap-1 text-xs text-gray-600 dark:text-gray-400'>
                             优选策略
+                            <button
+                              type='button'
+                              className='group relative inline-flex h-4 w-4 items-center justify-center rounded-full text-gray-400 transition-colors hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500/50 dark:text-gray-500 dark:hover:text-gray-300'
+                              aria-label='优选策略说明'
+                            >
+                              <CircleHelp className='h-3.5 w-3.5' />
+                              <span className='pointer-events-none absolute left-1/2 top-full z-50 mt-2 hidden w-56 -translate-x-1/2 rounded-lg bg-gray-900 px-3 py-2 text-left text-xs leading-relaxed text-white shadow-lg group-hover:block group-focus:block dark:bg-gray-700'>
+                                快速策略：快速优选高权重播放源
+                                <br />
+                                全量策略：全量优选全部源
+                              </span>
+                            </button>
                           </span>
                           <div className='inline-flex rounded-lg border border-gray-200 bg-gray-100 p-1 dark:border-gray-700 dark:bg-gray-800'>
                             <button
